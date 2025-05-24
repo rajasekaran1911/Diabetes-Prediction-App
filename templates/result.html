@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="form-container">
+    <h2>Diabetes Prediction Result</h2>
+
+    {% if diagnosis == "Yes" %}
+        <p style="color: red; font-size: 20px; font-weight: bold;">🛑 High Risk of Diabetes</p>
+    {% elif diagnosis == "No" %}
+        <p style="color: green; font-size: 20px; font-weight: bold;">✅ No Diabetes Detected</p>
+    {% else %}
+        <p style="color: gray; font-size: 18px;">⚠️ {{ diagnosis }}</p>
+    {% endif %}
+
+    <br>
+    <a href="/" style="text-decoration: none;">
+        <button>Go Back</button>
+    </a>
+</div>
+{% endblock %}
